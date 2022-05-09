@@ -1,1 +1,3 @@
 dist/
+/src/__tests__/bad/
+/src/__tests__/good/

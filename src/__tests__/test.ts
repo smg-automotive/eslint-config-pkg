@@ -1,9 +1,9 @@
-import { join } from 'path';
 import { cwd } from 'process';
+import { join } from 'path';
+
 import { countESLintError, logError, logInfo, logSuccess } from './utils';
 
 const testDir = join(cwd(), 'src', '__tests__');
-const log = console.log;
 
 interface TestConfig {
   eslintFilePath: string;

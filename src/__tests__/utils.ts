@@ -1,6 +1,7 @@
-import chalk from 'chalk';
 import { spawnSync } from 'child_process';
+import chalk from 'chalk';
 
+/* eslint-disable no-console */
 const log = console.log;
 
 export const logInfo = (message: string) => log(chalk.green('info'), message);
