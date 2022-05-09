@@ -9,6 +9,7 @@ module.exports = {
     './index.js',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:testing-library/react',
   ],
   plugins: ['react', 'testing-library'],
   settings: {

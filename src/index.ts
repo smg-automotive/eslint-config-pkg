@@ -15,7 +15,6 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:jest/recommended',
-    'plugin:testing-library/react',
   ],
   parserOptions: {
     ecmaVersion: 2020,
