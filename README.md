@@ -3,7 +3,7 @@ If you're interested in automated dependency updates make sure that `renovate` h
 
 # Things to do change when you use this repository as a template:
 - [ ] replace `example-pkg` with the name of your package in this `README`
-- [ ] update the `@smg-automotive/example` with the name of your package in `package.json`
+- [ ] update the `@smg-automotive/eslint-config` with the name of your package in `package.json`
 - [ ] update `repository` and `homepage` sections in `package.json` to point to your GitHub repository
 - [ ] ensure that Frontend team has the admin access to the repository
 - [ ] ensure that the Bots team has write access to the repository (this is needed to release the package)
@@ -19,7 +19,7 @@ If you're interested in automated dependency updates make sure that `renovate` h
 
 ## Usage
 ```
-npm install @smg-automotive/example
+npm install @smg-automotive/eslint-config
 ```
 
 ## Development
