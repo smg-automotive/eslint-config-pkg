@@ -36,26 +36,7 @@ Create `.eslintrc.js` in the root of the project:
 
 ### EditorConfig configuration
 
-Create/Update your `.editorconfig` by following content:
-
-```
-root = true
-
-[*]
-charset = utf-8
-indent_style = space
-indent_size = 2
-insert_final_newline = true
-trim_trailing_whitespace = true
-
-[*.md]
-max_line_length = off
-trim_trailing_whitespace = false
-
-[*.{js,jsx,ts,tsx}]
-spaces_around_brackets = inside
-
-```
+Create/Update your `.editorconfig` by [this content](https://github.com/smg-automotive/eslint-config-pkg/blob/main/.editorconfig):
 
 ### Prettier configuration
 
