@@ -1,19 +1,11 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "jsx": "react",
-    "module": "esnext",
-    "declaration": true,
-    "declarationDir": "types",
-    "sourceMap": true,
-    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es5",
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true
+    "lib": ["esnext"],
+    "esModuleInterop": true,
+    "jsx": "preserve"
   },
   "exclude": ["dist", "node_modules"],
   "include": ["src"]
