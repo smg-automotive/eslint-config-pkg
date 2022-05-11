@@ -1,4 +1,5 @@
 const { join } = require('path');
+
 const { countESLintError, logError, logInfo, logSuccess } = require('./utils');
 
 const testDir = join(process.cwd(), 'src', '__tests__');
@@ -7,19 +8,19 @@ const testConfigs = [
   {
     eslintFilePath: `${testDir}/.eslintrc.js`,
     good: 0,
-    bad: 15,
+    bad: 17,
     filePattern: '{js,ts}',
   },
   {
     eslintFilePath: `${testDir}/.eslintrc.react.js`,
     good: 0,
-    bad: 23,
+    bad: 25,
     filePattern: '{js,ts,jsx,tsx}',
   },
   {
     eslintFilePath: `${testDir}/.eslintrc.next.js`,
     good: 0,
-    bad: 21,
+    bad: 23,
     filePattern: '{js,ts,jsx,tsx}',
   },
 ];
