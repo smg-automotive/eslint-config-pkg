@@ -15,15 +15,6 @@ module.exports = {
       version: 'detect',
     },
   },
-  overrides: [
-    {
-      files: ['*.tsx'],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        project: 'tsconfig.json',
-      },
-    },
-  ],
   rules: {
     'react/react-in-jsx-scope': 0,
     'react/jsx-uses-react': 0,
