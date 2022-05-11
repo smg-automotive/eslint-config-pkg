@@ -5,6 +5,15 @@
   "publishConfig": {
     "access": "public"
   },
+  "exports": {
+    "./prettier": "./src/prettier.js",
+    "./next": "./src/next.js",
+    "./react": "./src/react.js",
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src/**/*"
+  ],
   "scripts": {
     "version": "npm run build",
     "build": "echo Success",
@@ -45,14 +54,5 @@
     "react-dom": "18.1.0",
     "rimraf": "3.0.2",
     "semantic-release": "19.0.2"
-  },
-  "exports": {
-    "./prettier": "./src/prettier.js",
-    "./next": "./src/next.js",
-    "./react": "./src/react.js",
-    ".": "./src/index.js"
-  },
-  "files": [
-    "src/**/*"
-  ]
+  }
 }
