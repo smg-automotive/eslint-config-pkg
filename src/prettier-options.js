@@ -1,6 +1,4 @@
-import { Options } from 'prettier';
-
-export const prettierOptions: Options = {
+const prettierOptions = {
   singleQuote: true,
   printWidth: 80,
   tabWidth: 2,

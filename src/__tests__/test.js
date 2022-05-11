@@ -1,18 +1,9 @@
-import { cwd, exit } from 'process';
-import { join } from 'path';
+const { join } = require('path');
+const { countESLintError, logError, logInfo, logSuccess } = require('./utils');
 
-import { countESLintError, logError, logInfo, logSuccess } from './utils';
+const testDir = join(process.cwd(), 'src', '__tests__');
 
-const testDir = join(cwd(), 'src', '__tests__');
-
-interface TestConfig {
-  eslintFilePath: string;
-  good: number;
-  bad: number;
-  filePattern: string;
-}
-
-const testConfigs: TestConfig[] = [
+const testConfigs = [
   {
     eslintFilePath: `${testDir}/.eslintrc.js`,
     good: 0,
@@ -74,5 +65,5 @@ testConfigs.forEach((testConfig) => {
 });
 
 if (!isSuccess) {
-  exit(1);
+  process.exit(1);
 }

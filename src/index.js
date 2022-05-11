@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-
 // eslint-disable-next-line import/no-internal-modules
 require('@rushstack/eslint-patch/modern-module-resolution');
 
@@ -10,10 +8,8 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'plugin:import/recommended',
-    'plugin:import/typescript',
     'plugin:jest/recommended',
   ],
   parserOptions: {
@@ -23,17 +19,10 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['@typescript-eslint', 'prettier', 'import', 'jest'],
+  plugins: ['prettier', 'import', 'jest'],
   overrides: [
     {
-      files: ['*.ts'],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        project: './tsconfig.json',
-      },
-    },
-    {
-      files: ['**/*.ts?(x)'],
+      files: ['*.ts?(x)'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
         project: './tsconfig.json',
@@ -42,6 +31,51 @@ module.exports = {
           jsx: true,
         },
         warnOnUnsupportedTypeScriptVersion: true,
+      },
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:import/typescript',
+      ],
+      plugins: ['@typescript-eslint'],
+      rules: {
+        '@typescript-eslint/no-redeclare': 'error',
+        '@typescript-eslint/no-shadow': 'error',
+        '@typescript-eslint/no-explicit-any': 'error',
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          {
+            varsIgnorePattern: '^_',
+            argsIgnorePattern: '^_',
+            ignoreRestSiblings: true,
+          },
+        ],
+        '@typescript-eslint/naming-convention': [
+          'error',
+          {
+            selector: 'default',
+            format: ['camelCase'],
+            leadingUnderscore: 'allow',
+          },
+          {
+            selector: 'memberLike',
+            format: ['camelCase', 'PascalCase'],
+            leadingUnderscore: 'allow',
+          },
+          {
+            selector: 'variableLike',
+            format: ['camelCase', 'PascalCase'],
+            leadingUnderscore: 'allow',
+          },
+          {
+            selector: 'property',
+            format: ['camelCase', 'snake_case', 'PascalCase'],
+            leadingUnderscore: 'allow',
+          },
+          {
+            selector: 'typeLike',
+            format: ['PascalCase'],
+          },
+        ],
       },
     },
   ],
@@ -72,44 +106,6 @@ module.exports = {
         ignoreMemberSort: false,
         memberSyntaxSortOrder: ['none', 'single', 'all', 'multiple'],
         allowSeparatedGroups: true,
-      },
-    ],
-    '@typescript-eslint/no-redeclare': 'error',
-    '@typescript-eslint/no-shadow': 'error',
-    '@typescript-eslint/no-explicit-any': 'error',
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      {
-        varsIgnorePattern: '^_',
-        argsIgnorePattern: '^_',
-        ignoreRestSiblings: true,
-      },
-    ],
-    '@typescript-eslint/naming-convention': [
-      'error',
-      {
-        selector: 'default',
-        format: ['camelCase'],
-        leadingUnderscore: 'allow',
-      },
-      {
-        selector: 'memberLike',
-        format: ['camelCase', 'PascalCase'],
-        leadingUnderscore: 'allow',
-      },
-      {
-        selector: 'variableLike',
-        format: ['camelCase', 'PascalCase'],
-        leadingUnderscore: 'allow',
-      },
-      {
-        selector: 'property',
-        format: ['camelCase', 'snake_case', 'PascalCase'],
-        leadingUnderscore: 'allow',
-      },
-      {
-        selector: 'typeLike',
-        format: ['PascalCase'],
       },
     ],
     'prettier/prettier': ['error', require('./prettier-options')],
