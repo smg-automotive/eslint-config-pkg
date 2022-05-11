@@ -37,6 +37,14 @@ module.exports = {
       ],
       plugins: ['@typescript-eslint'],
       rules: {
+        'no-unused-vars': [
+          'error',
+          {
+            varsIgnorePattern: '^_',
+            argsIgnorePattern: '^_',
+            ignoreRestSiblings: true,
+          },
+        ],
         '@typescript-eslint/no-redeclare': 'error',
         '@typescript-eslint/no-shadow': 'error',
         '@typescript-eslint/no-explicit-any': 'error',
