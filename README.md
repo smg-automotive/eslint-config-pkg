@@ -36,7 +36,7 @@ Create `.eslintrc.js` in the root of the project:
 
 ### EditorConfig configuration
 
-Create/Update your `.editorconfig` by [this content](https://github.com/smg-automotive/eslint-config-pkg/blob/main/.editorconfig):
+Create/Update your `.editorconfig` by [this content](https://github.com/smg-automotive/eslint-config-pkg/blob/main/.editorconfig).
 
 ### Prettier configuration
 
