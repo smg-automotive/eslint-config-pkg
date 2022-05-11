@@ -7,7 +7,7 @@
   },
   "scripts": {
     "version": "npm run build",
-    "build": "",
+    "build": "echo Success",
     "lint": "eslint --ext ts,js,tsx,jsx,json ./src --ignore-path ./src/__tests__/.eslintignore",
     "format": "npm run lint -- --fix",
     "typecheck": "tsc --noEmit",
