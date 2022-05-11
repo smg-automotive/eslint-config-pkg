@@ -107,10 +107,6 @@ workflows:
           <<: *SLACK_NOTIFICATION_CONTEXT
           requires:
             - install
-      - typecheck:
-          <<: *SLACK_NOTIFICATION_CONTEXT
-          requires:
-            - install
       - build:
           <<: *SLACK_NOTIFICATION_CONTEXT
           requires:
