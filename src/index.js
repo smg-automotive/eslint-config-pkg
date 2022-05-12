@@ -23,6 +23,11 @@ module.exports = {
   overrides: [
     {
       files: ['*.ts?(x)'],
+      settings: {
+        'import/resolver': {
+          typescript: {},
+        },
+      },
       parser: '@typescript-eslint/parser',
       parserOptions: {
         sourceType: 'module',
@@ -30,11 +35,6 @@ module.exports = {
           jsx: true,
         },
         warnOnUnsupportedTypeScriptVersion: true,
-      },
-      settings: {
-        'import/resolver': {
-          typescript: {},
-        },
       },
       extends: [
         'plugin:@typescript-eslint/recommended',
