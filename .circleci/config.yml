@@ -62,30 +62,6 @@ jobs:
       - run: npm run lint
       - <<: *SLACK_NOTIFY
 
-  typecheck:
-    <<: *DOCKER_NODE
-    resource_class: small
-    steps:
-      - attach_workspace:
-          at: ~/
-      - run:
-          command: npm run typecheck
-          no_output_timeout: 1m
-      - <<: *SLACK_NOTIFY
-
-  build:
-    <<: *DOCKER_NODE
-    resource_class: small
-    steps:
-      - attach_workspace:
-          at: ~/
-      - run: npm run build
-      - persist_to_workspace:
-          root: ~/
-          paths:
-            - project/dist
-      - <<: *SLACK_NOTIFY
-
   pre_release:
     <<: *DOCKER_NODE
     resource_class: small
@@ -118,21 +94,11 @@ workflows:
           <<: *SLACK_NOTIFICATION_CONTEXT
           requires:
             - install
-      - typecheck:
-          <<: *SLACK_NOTIFICATION_CONTEXT
-          requires:
-            - install
-      - build:
-          <<: *SLACK_NOTIFICATION_CONTEXT
-          requires:
-            - install
       - pre_release:
           <<: *NPM_PUBLISHING_CONTEXT
           requires:
             - lint
             - unit
-            - typecheck
-            - build
           filters:
             branches:
               ignore: main
@@ -141,8 +107,6 @@ workflows:
           requires:
             - lint
             - unit
-            - typecheck
-            - build
           filters:
             branches:
               only: main
