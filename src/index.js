@@ -31,6 +31,11 @@ module.exports = {
         },
         warnOnUnsupportedTypeScriptVersion: true,
       },
+      settings: {
+        'import/resolver': {
+          typescript: {},
+        },
+      },
       extends: [
         'plugin:@typescript-eslint/recommended',
         'plugin:import/typescript',
