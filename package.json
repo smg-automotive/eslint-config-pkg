@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "chalk": "4.1.2",
-    "jest": "28.0.3",
+    "jest": "28.1.0",
     "prettier": "2.6.2",
     "react": "18.1.0",
     "react-dom": "18.1.0",
