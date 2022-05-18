@@ -8,6 +8,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:testing-library/react',
+    'plugin:cypress/recommended',
   ],
   plugins: ['react', 'testing-library'],
   settings: {
