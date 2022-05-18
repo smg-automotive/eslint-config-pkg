@@ -11,6 +11,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:import/recommended',
     'plugin:jest/recommended',
+    'plugin:cypress/recommended',
   ],
   parserOptions: {
     ecmaVersion: 2020,
