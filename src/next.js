@@ -4,12 +4,10 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   overrides: [
     {
-      files: [
-        "**/__tests__/pages/**/*.test.tsx",
-      ],
+      files: ['**/__tests__/pages/**/*.test.tsx'],
       rules: {
-        "jest/valid-expect": "off",
-        "jest/expect-expect": "off",
+        'jest/valid-expect': 'off',
+        'jest/expect-expect': 'off',
       },
     },
   ],
