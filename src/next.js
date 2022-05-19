@@ -27,7 +27,12 @@ module.exports = {
     'import/no-internal-modules': [
       'error',
       {
-        allow: ['next/*'],
+        allow: [
+          'next/*',
+          '@testing-library/**/*',
+          'react-dom/*',
+          '**/*.css',
+        ],
       },
     ],
   },
