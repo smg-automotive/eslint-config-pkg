@@ -125,7 +125,7 @@ module.exports = {
         allowSeparatedGroups: true,
       },
     ],
-    'prettier/prettier': ['error', require('./prettier-options')],
+    'prettier/prettier': ['error', require('./prettierOptions')],
     'no-unused-vars': [
       'error',
       {

@@ -20,7 +20,7 @@ const testConfigs = [
   {
     eslintFilePath: `${testDir}/.eslintrc.next.js`,
     good: 0,
-    bad: 29,
+    bad: 33,
     filePattern: '{js,ts,jsx,tsx}',
   },
 ];
