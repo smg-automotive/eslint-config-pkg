@@ -22,6 +22,19 @@ module.exports = {
         'jest/expect-expect': 'off',
       },
     },
+    {
+      files: ['**/pages/**/*.tsx', '**/pages/**/*.jsx'],
+      rules: {
+        'unicorn/filename-case': [
+          'error',
+          {
+            cases: {
+              kebabCase: true,
+            },
+          },
+        ],
+      },
+    },
   ],
   rules: {
     'import/no-internal-modules': [
