@@ -19,8 +19,21 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['prettier', 'import', 'jest'],
+  plugins: ['prettier', 'import', 'jest', 'unicorn'],
   overrides: [
+    {
+      files: ['*.ts', '*.js'],
+      rules: {
+        'unicorn/filename-case': [
+          'error',
+          {
+            cases: {
+              camelCase: true,
+            },
+          },
+        ],
+      },
+    },
     {
       files: ['*.ts?(x)'],
       settings: {
