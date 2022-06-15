@@ -16,7 +16,7 @@ module.exports = {
       },
     },
     {
-      files: ['**/components/**/*.test.tsx', '**/components/**/*.test.jsx'],
+      files: ['**/components/**/*.Test.tsx', '**/components/**/*.Test.jsx'],
       rules: {
         'jest/valid-expect': 'off',
         'jest/expect-expect': 'off',
