@@ -10,7 +10,7 @@ module.exports = {
     'plugin:testing-library/react',
     'plugin:cypress/recommended',
   ],
-  plugins: ['react', 'testing-library', 'unicorn'],
+  plugins: ['react', 'testing-library'],
   settings: {
     react: {
       version: 'detect',
@@ -22,7 +22,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/components/**/*.tsx', '**/components/**/*.jsx'],
+      files: ['*.tsx', '*.jsx'],
       rules: {
         'unicorn/filename-case': [
           'error',

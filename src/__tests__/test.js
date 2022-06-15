@@ -13,8 +13,8 @@ const testConfigs = [
   },
   {
     eslintFilePath: `${testDir}/.eslintrc.react.js`,
-    good: 0,
-    bad: 31,
+    good: 6,
+    bad: 33,
     filePattern: '{js,ts,jsx,tsx}',
   },
   {
