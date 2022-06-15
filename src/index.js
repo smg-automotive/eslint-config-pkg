@@ -19,8 +19,21 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['prettier', 'import', 'jest'],
+  plugins: ['prettier', 'import', 'jest', 'unicorn'],
   overrides: [
+    {
+      files: ['*.ts', '*.js'],
+      rules: {
+        'unicorn/filename-case': [
+          'error',
+          {
+            cases: {
+              camelCase: true,
+            },
+          },
+        ],
+      },
+    },
     {
       files: ['*.ts?(x)'],
       settings: {
@@ -112,7 +125,7 @@ module.exports = {
         allowSeparatedGroups: true,
       },
     ],
-    'prettier/prettier': ['error', require('./prettier-options')],
+    'prettier/prettier': ['error', require('./prettierOptions')],
     'no-unused-vars': [
       'error',
       {

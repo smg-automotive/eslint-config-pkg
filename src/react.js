@@ -20,4 +20,20 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react/jsx-uses-react': 0,
   },
+  overrides: [
+    {
+      files: ['*.tsx', '*.jsx'],
+      rules: {
+        'unicorn/filename-case': [
+          'error',
+          {
+            cases: {
+              pascalCase: true,
+            },
+            ignore: ['index.(j|t)sx'],
+          },
+        ],
+      },
+    },
+  ],
 };
