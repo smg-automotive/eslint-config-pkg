@@ -20,6 +20,7 @@ module.exports = {
     },
   },
   plugins: ['prettier', 'import', 'jest', 'unicorn'],
+  ignorePatterns: ['dist'],
   overrides: [
     {
       files: ['*.ts', '*.js'],
