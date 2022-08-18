@@ -12,7 +12,7 @@
       "automerge": true,
       "rangeStrategy": "pin",
       "schedule": [
-        "before 3am on Monday"
+        "before 3am on Tuesday"
       ]
     }
   ]
