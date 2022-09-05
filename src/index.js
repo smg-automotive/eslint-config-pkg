@@ -135,6 +135,5 @@ module.exports = {
         ignoreRestSiblings: true,
       },
     ],
-    'no-shadow': 'error',
   },
 };
