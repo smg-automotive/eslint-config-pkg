@@ -96,6 +96,12 @@ module.exports = {
         ],
       },
     },
+    {
+      files: ['*.ts'],
+      rules: {
+        'no-shadow': 'off',
+      },
+    },
   ],
   rules: {
     'no-console': 'error',
