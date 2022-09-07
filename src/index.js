@@ -93,6 +93,21 @@ module.exports = {
             selector: 'typeLike',
             format: ['PascalCase'],
           },
+          {
+            // Ignore properties that require quotes
+            selector: [
+              'classProperty',
+              'objectLiteralProperty',
+              'typeProperty',
+              'classMethod',
+              'objectLiteralMethod',
+              'typeMethod',
+              'accessor',
+              'enumMember',
+            ],
+            format: null,
+            modifiers: ['requiresQuotes'],
+          },
         ],
       },
     },
