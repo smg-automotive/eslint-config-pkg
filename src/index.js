@@ -120,7 +120,12 @@ module.exports = {
   ],
   rules: {
     'no-console': 'error',
-    'import/no-internal-modules': 'error',
+    'import/no-internal-modules': [
+      'error',
+      {
+        forbid: ['external'],
+      },
+    ],
     'import/order': [
       'error',
       {
