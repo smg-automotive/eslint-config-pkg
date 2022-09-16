@@ -40,7 +40,7 @@ module.exports = {
     'import/no-internal-modules': [
       'error',
       {
-        allow: ['*/*'],
+        allow: ['*/*', '@testing-library/**/*'],
       },
     ],
   },
