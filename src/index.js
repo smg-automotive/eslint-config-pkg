@@ -123,7 +123,7 @@ module.exports = {
     'import/no-internal-modules': [
       'error',
       {
-        forbid: ['@*/**'],
+        allow: ['*/*'],
       },
     ],
     'import/order': [

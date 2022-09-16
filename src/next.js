@@ -37,10 +37,10 @@ module.exports = {
     },
   ],
   rules: {
-    'import/no-internal-modules': [
+    'no-restricted-imports': [
       'error',
       {
-        forbid: ['@*/**'],
+        allow: ['*/*'],
       },
     ],
   },
