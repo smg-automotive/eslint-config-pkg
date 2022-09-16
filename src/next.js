@@ -40,7 +40,7 @@ module.exports = {
     'import/no-internal-modules': [
       'error',
       {
-        forbid: ['external'],
+        forbid: ['@*/**'],
       },
     ],
   },
