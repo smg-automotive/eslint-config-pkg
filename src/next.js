@@ -37,7 +37,7 @@ module.exports = {
     },
   ],
   rules: {
-    'no-restricted-imports': [
+    'import/no-internal-modules': [
       'error',
       {
         allow: ['*/*'],
