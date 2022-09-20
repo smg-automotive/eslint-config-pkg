@@ -40,7 +40,11 @@ module.exports = {
     'import/no-internal-modules': [
       'error',
       {
-        forbid: ['*/dist/**', '*/dist'],
+        allow: [
+          'next/*',
+          '@testing-library/**',
+          '**/+(config|components|types)/**',
+        ],
       },
     ],
   },

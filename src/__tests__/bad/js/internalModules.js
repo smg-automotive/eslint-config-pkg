@@ -1,2 +1,2 @@
 // eslint-disable-next-line no-unused-vars
-import promisify from 'agent-base/dist/src/promisify';
+import picka from '@next/eslint-plugin-next/lib/index';
