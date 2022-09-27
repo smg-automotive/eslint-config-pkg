@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-internal-modules
 require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
@@ -120,7 +119,6 @@ module.exports = {
   ],
   rules: {
     'no-console': 'error',
-    'import/no-internal-modules': 'error',
     'import/order': [
       'error',
       {
