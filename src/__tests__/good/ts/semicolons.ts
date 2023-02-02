@@ -1,1 +1,1 @@
-const _yo = true;
+export const yo = 3;

@@ -1,2 +1,1 @@
-// eslint-disable-next-line no-unused-vars
-const _yo = true;
+export const yo = 4;
