@@ -8,19 +8,19 @@ const testConfigs = [
   {
     eslintFilePath: `${testDir}/.eslintrc.js`,
     good: 0,
-    bad: 14,
+    bad: 16,
     filePattern: '{js,ts}',
   },
   {
     eslintFilePath: `${testDir}/.eslintrc.react.js`,
     good: 6,
-    bad: 26,
+    bad: 28,
     filePattern: '{js,ts,jsx,tsx}',
   },
   {
     eslintFilePath: `${testDir}/.eslintrc.next.js`,
     good: 0,
-    bad: 26,
+    bad: 28,
     filePattern: '{js,ts,jsx,tsx}',
   },
 ];
