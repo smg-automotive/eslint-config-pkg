@@ -10,6 +10,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:import/recommended',
     'plugin:jest/recommended',
+    'plugin:sonarjs/recommended',
   ],
   parserOptions: {
     ecmaVersion: 2020,
@@ -18,7 +19,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['prettier', 'import', 'jest', 'unicorn'],
+  plugins: ['prettier', 'import', 'jest', 'unicorn', 'sonarjs'],
   ignorePatterns: ['dist'],
   overrides: [
     {
