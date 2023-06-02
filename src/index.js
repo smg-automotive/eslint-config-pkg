@@ -10,6 +10,8 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:import/recommended',
     'plugin:jest/recommended',
+    'plugin:security/recommended',
+    'plugin:xss/recommended',
   ],
   parserOptions: {
     ecmaVersion: 2020,
@@ -18,7 +20,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['prettier', 'import', 'jest', 'unicorn'],
+  plugins: ['prettier', 'import', 'jest', 'unicorn', 'security', 'xss'],
   ignorePatterns: ['dist'],
   overrides: [
     {
