@@ -23,6 +23,19 @@ module.exports = {
   ignorePatterns: ['dist'],
   overrides: [
     {
+      files: [
+        '**/locales/**',
+        '**/__tests__/**/*.[jt]s?(x)',
+        '**/?(*.)+(spec|test).[tj]s?(x)*',
+        'package-lock.json',
+        '**/config/**',
+        '**/cypress/**',
+      ],
+      rules: {
+        'sonarjs/no-duplicate-string': 'off',
+      },
+    },
+    {
       files: ['*.ts', '*.js'],
       rules: {
         'unicorn/filename-case': [
@@ -119,6 +132,8 @@ module.exports = {
     },
   ],
   rules: {
+    'max-switch-cases': ['error', 15],
+    'prefer-imediate-return': 'error',
     'no-console': 'error',
     'import/order': [
       'error',
