@@ -10,6 +10,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:import/recommended',
     'plugin:jest/recommended',
+    'plugin:sonarjs/recommended',
   ],
   parserOptions: {
     ecmaVersion: 2020,
@@ -18,9 +19,22 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['prettier', 'import', 'jest', 'unicorn'],
+  plugins: ['prettier', 'import', 'jest', 'unicorn', 'sonarjs'],
   ignorePatterns: ['dist'],
   overrides: [
+    {
+      files: [
+        '**/locales/**',
+        '**/__tests__/**/*.[jt]s?(x)',
+        '**/?(*.)+(spec|test).[tj]s?(x)*',
+        'package-lock.json',
+        '**/config/**',
+        '**/cypress/**',
+      ],
+      rules: {
+        'sonarjs/no-duplicate-string': 'off',
+      },
+    },
     {
       files: ['*.ts', '*.js'],
       rules: {
@@ -118,6 +132,7 @@ module.exports = {
     },
   ],
   rules: {
+    'sonarjs/max-switch-cases': ['error', 15],
     'no-console': 'error',
     'import/order': [
       'error',
