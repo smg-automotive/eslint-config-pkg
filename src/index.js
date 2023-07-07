@@ -133,7 +133,6 @@ module.exports = {
   ],
   rules: {
     'sonarjs/max-switch-cases': ['error', 15],
-    'sonarjs/prefer-immediate-return': 'off',
     'no-console': 'error',
     'import/order': [
       'error',
