@@ -18,7 +18,7 @@ const countESLintError = (eslintFilePath, filePattern, testType) => {
       `"src/__tests__/${testType}/**/*.${filePattern}"`,
       '--format json',
     ],
-    { shell: true, encoding: 'utf-8' }
+    { shell: true, encoding: 'utf-8' },
   );
 
   const response = JSON.parse(spawn.stdout);
