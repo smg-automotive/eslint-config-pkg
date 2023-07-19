@@ -34,12 +34,12 @@ testConfigs.forEach((testConfig) => {
   let errorCount = countESLintError(
     testConfig.eslintFilePath,
     testConfig.filePattern,
-    'bad'
+    'bad',
   );
 
   if (errorCount !== testConfig.bad) {
     logError(
-      `Expected ${testConfig.bad} but got ${errorCount} linting errors for badly formatted files`
+      `Expected ${testConfig.bad} but got ${errorCount} linting errors for badly formatted files`,
     );
     isSuccess = false;
   } else {
@@ -52,12 +52,12 @@ testConfigs.forEach((testConfig) => {
   errorCount = countESLintError(
     testConfig.eslintFilePath,
     testConfig.filePattern,
-    'good'
+    'good',
   );
 
   if (errorCount !== testConfig.good) {
     logError(
-      `Expected ${testConfig.good} but got ${errorCount} linting errors for well formatted files`
+      `Expected ${testConfig.good} but got ${errorCount} linting errors for well formatted files`,
     );
     isSuccess = false;
   } else {
