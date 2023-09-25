@@ -36,6 +36,12 @@ module.exports = {
       },
     },
     {
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[tj]s?(x)*'],
+      rules: {
+        'import/no-named-as-default': 0,
+      },
+    },
+    {
       files: ['*.ts', '*.js'],
       rules: {
         'unicorn/filename-case': [
