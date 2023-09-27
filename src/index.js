@@ -33,6 +33,7 @@ module.exports = {
       ],
       rules: {
         'sonarjs/no-duplicate-string': 'off',
+        'import/no-named-as-default': 'off',
       },
     },
     {
