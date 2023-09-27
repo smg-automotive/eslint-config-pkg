@@ -33,12 +33,7 @@ module.exports = {
       ],
       rules: {
         'sonarjs/no-duplicate-string': 'off',
-      },
-    },
-    {
-      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[tj]s?(x)*'],
-      rules: {
-        'import/no-named-as-default': 0,
+        'import/no-named-as-default': 'off',
       },
     },
     {
