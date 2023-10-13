@@ -34,7 +34,7 @@ module.exports = {
           },
         ],
       },
-      ignorePatterns: ['**/__tests__/pages/**'],
+      ignorePatterns: ['**/__tests__/pages/**/*.tsx', '**/__tests__/pages/**/*.jsx'],
     },
   ],
 };
