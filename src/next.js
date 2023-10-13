@@ -34,7 +34,12 @@ module.exports = {
           },
         ],
       },
-      ignorePatterns: ['**/__tests__/pages/**/*.tsx', '**/__tests__/pages/**/*.jsx'],
+    },
+    {
+      files: ['**/__tests__/pages/**/*.tsx', '**/__tests__/pages/**/*.jsx'],
+      rules: {
+        'unicorn/filename-case': 'off',
+      },
     },
   ],
 };
