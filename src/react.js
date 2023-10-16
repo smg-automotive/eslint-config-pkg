@@ -35,11 +35,5 @@ module.exports = {
         ],
       },
     },
-    {
-      files: ['**/__tests__/pages/**/*.tsx', '**/__tests__/pages/**/*.jsx'],
-      rules: {
-        'unicorn/filename-case': 'off',
-      },
-    },
   ],
 };
