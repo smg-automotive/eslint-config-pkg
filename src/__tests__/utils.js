@@ -21,6 +21,10 @@ const countESLintError = (eslintFilePath, filePattern, testType) => {
     { shell: true, encoding: 'utf-8' },
   );
 
+  if (!spawn.stdout.length) {
+    throw spawn.stderr;
+  }
+
   const response = JSON.parse(spawn.stdout);
 
   return response.reduce((p, c) => p + c.errorCount, 0);
