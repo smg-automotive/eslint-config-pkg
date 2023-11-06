@@ -28,7 +28,7 @@ module.exports = {
         '**/__tests__/**/*.[jt]s?(x)',
         '**/?(*.)+(spec|test).[tj]s?(x)*',
         'package-lock.json',
-        '*.json',
+        '**/*.json',
         '**/config/**',
         '**/cypress/**',
       ],
