@@ -17,7 +17,7 @@
   "scripts": {
     "lint": "eslint --ext ts,js,tsx,jsx,json ./src --ignore-path ./src/__tests__/.eslintignore",
     "format": "npm run lint -- --fix",
-    "test": "node src/__tests__/test.js"
+    "test": "node src/__tests__/test.mjs"
   },
   "author": "SMG Automotive",
   "license": "MIT",
@@ -27,30 +27,30 @@
   },
   "homepage": "https://github.com/smg-automotive/eslint-config-pkg#readme",
   "dependencies": {
-    "@next/eslint-plugin-next": "13.5.6",
+    "@next/eslint-plugin-next": "14.0.1",
     "@rushstack/eslint-patch": "1.5.1",
-    "@typescript-eslint/eslint-plugin": "6.9.0",
-    "@typescript-eslint/parser": "6.9.0",
-    "eslint": "8.52.0",
-    "eslint-config-next": "13.5.6",
+    "@typescript-eslint/eslint-plugin": "6.10.0",
+    "@typescript-eslint/parser": "6.10.0",
+    "eslint": "8.53.0",
+    "eslint-config-next": "14.0.1",
     "eslint-config-prettier": "9.0.0",
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-cypress": "2.15.1",
     "eslint-plugin-import": "2.29.0",
-    "eslint-plugin-jest": "27.4.3",
+    "eslint-plugin-jest": "27.6.0",
     "eslint-plugin-prettier": "5.0.1",
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
-    "eslint-plugin-sonarjs": "0.21.0",
+    "eslint-plugin-sonarjs": "0.23.0",
     "eslint-plugin-testing-library": "6.1.0",
-    "eslint-plugin-unicorn": "48.0.1",
+    "eslint-plugin-unicorn": "49.0.0",
     "prettier": "3.0.3"
   },
   "devDependencies": {
-    "chalk": "4.1.2",
+    "chalk": "5.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rimraf": "5.0.5",
-    "semantic-release": "22.0.5"
+    "semantic-release": "22.0.7"
   }
 }

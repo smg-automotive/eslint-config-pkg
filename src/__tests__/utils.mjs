@@ -1,16 +1,17 @@
-const { spawnSync } = require('child_process');
-const chalk = require('chalk');
+import { spawnSync } from 'child_process';
+import chalk from 'chalk';
 
 /* eslint-disable no-console */
 const log = console.log;
 
-const logInfo = (message) => log(chalk.green('info'), message);
+export const logInfo = (message) => log(chalk.green('info'), message);
 
-const logSuccess = (message) => log(chalk.bgGreen.whiteBright('info'), message);
+export const logSuccess = (message) =>
+  log(chalk.bgGreen.whiteBright('info'), message);
 
-const logError = (message) => log(chalk.red('error'), message);
+export const logError = (message) => log(chalk.red('error'), message);
 
-const countESLintError = (eslintFilePath, filePattern, testType) => {
+export const countESLintError = (eslintFilePath, filePattern, testType) => {
   const spawn = spawnSync(
     'npx eslint',
     [
@@ -28,11 +29,4 @@ const countESLintError = (eslintFilePath, filePattern, testType) => {
   const response = JSON.parse(spawn.stdout);
 
   return response.reduce((p, c) => p + c.errorCount, 0);
-};
-
-module.exports = {
-  logInfo,
-  logSuccess,
-  logError,
-  countESLintError,
 };
