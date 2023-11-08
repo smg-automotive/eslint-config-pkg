@@ -1,3 +1,3 @@
-import { logInfo } from '../../utils';
+import { logInfo } from '../../utils.mjs';
 
 logInfo('test');
