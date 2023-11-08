@@ -17,7 +17,7 @@
   "scripts": {
     "lint": "eslint --ext ts,js,tsx,jsx,json ./src --ignore-path ./src/__tests__/.eslintignore",
     "format": "npm run lint -- --fix",
-    "test": "node src/__tests__/test.js"
+    "test": "node src/__tests__/test.mjs"
   },
   "author": "SMG Automotive",
   "license": "MIT",
