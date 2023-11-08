@@ -17,7 +17,7 @@
   "scripts": {
     "lint": "eslint --ext ts,js,tsx,jsx,json ./src --ignore-path ./src/__tests__/.eslintignore",
     "format": "npm run lint -- --fix",
-    "test": "node src/__tests__/test.js"
+    "test": "node src/__tests__/test.mjs"
   },
   "author": "SMG Automotive",
   "license": "MIT",
@@ -47,7 +47,7 @@
     "prettier": "3.0.3"
   },
   "devDependencies": {
-    "chalk": "4.1.2",
+    "chalk": "5.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rimraf": "5.0.5",

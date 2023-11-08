@@ -1,6 +1,6 @@
-const { join } = require('path');
+import { join } from 'path';
 
-const { countESLintError, logError, logInfo, logSuccess } = require('./utils');
+import { countESLintError, logError, logInfo, logSuccess } from './utils.mjs';
 
 const testDir = join(process.cwd(), 'src', '__tests__');
 
