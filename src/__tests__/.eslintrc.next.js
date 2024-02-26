@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-
 module.exports = {
   extends: ['../../src/next.js'],
   rules: {
