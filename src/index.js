@@ -101,8 +101,8 @@ module.exports = {
           },
           {
             selector: 'property',
-            format: ['camelCase', 'snake_case', 'PascalCase'],
-            leadingUnderscore: 'allow',
+            format: ['camelCase', 'snake_case', 'PascalCase', 'UPPER_CASE'],
+            leadingUnderscore: 'allowSingleOrDouble',
           },
           {
             selector: 'typeLike',
