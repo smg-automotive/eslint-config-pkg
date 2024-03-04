@@ -96,7 +96,7 @@ module.exports = {
           },
           {
             selector: 'variableLike',
-            format: ['camelCase', 'PascalCase', 'snake_case'],
+            format: ['camelCase', 'PascalCase'],
             leadingUnderscore: 'allow',
           },
           {
