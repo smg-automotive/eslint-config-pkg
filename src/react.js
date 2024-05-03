@@ -30,6 +30,7 @@ module.exports = {
             cases: {
               pascalCase: true,
             },
+            multipleFileExtensions: false,
             ignore: ['index.(j|t)sx'],
           },
         ],
