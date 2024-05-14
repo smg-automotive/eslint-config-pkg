@@ -50,7 +50,7 @@
     "chalk": "5.3.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "rimraf": "5.0.5",
-    "semantic-release": "23.0.8"
+    "rimraf": "5.0.7",
+    "semantic-release": "23.1.1"
   }
 }
