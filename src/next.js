@@ -36,7 +36,15 @@ module.exports = {
       },
     },
     {
-      files: ['**/__tests__/pages/**/*.tsx', '**/__tests__/pages/**/*.jsx'],
+      files: [
+        '**/__tests__/pages/**/*.tsx',
+        '**/__tests__/pages/**/*.jsx',
+        'app/**/page.tsx',
+        'app/**/layout.tsx',
+        'app/global-error.tsx',
+        'app/**/not-found.tsx',
+        'app/**/error.tsx',
+      ],
       rules: {
         'unicorn/filename-case': 'off',
       },
