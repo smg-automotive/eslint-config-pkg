@@ -18,6 +18,7 @@
     "lint": "eslint ./src --ignore-pattern 'src/__tests__/**'",
     "lint:tests:index": "eslint 'src/__tests__/**' --config ./src/__tests__/eslint.config.js",
     "lint:tests:react": "eslint 'src/__tests__/**' --config ./src/__tests__/eslint.react.js",
+    "lint:tests:next": "eslint 'src/__tests__/**' --config ./src/__tests__/eslint.next.js",
     "format": "npm run lint -- --fix",
     "test": "node src/__tests__/test.mjs"
   },
