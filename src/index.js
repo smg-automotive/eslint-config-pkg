@@ -1,9 +1,3 @@
-import react from './react.mjs';
-import next from './next.mjs';
-import baseConfig from './index.mjs';
-
-exports.default = {
-  next,
-  basic:baseConfig,
-  react
-}
+export { default as next } from "./next.mjs";
+export { default as basic } from "./index.mjs";
+export { default as react } from "./react.mjs";
