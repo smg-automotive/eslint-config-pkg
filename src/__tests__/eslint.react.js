@@ -1,4 +1,4 @@
-import baseConfig from '../reactV2.mjs';
+import baseConfig from '../react.mjs';
 
 export default [
   ...baseConfig,
