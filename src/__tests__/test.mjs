@@ -14,7 +14,9 @@ const testConfigs = [
   },
   {
     eslintFilePath: `${testDir}/eslint.react.js`,
+    // the 6 expected were are things inside pages since it's nextjs related
     good: 6,
+    // should be 28 but only has 18. What was the problem with Markup.tsx???
     bad: 28,
     filePattern: '{js,ts,jsx,tsx}',
   },
