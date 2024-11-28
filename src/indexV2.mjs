@@ -3,6 +3,7 @@ import importPlugin from 'eslint-plugin-import';
 import jest from 'eslint-plugin-jest';
 import sonarjs from 'eslint-plugin-sonarjs';
 import js from '@eslint/js';
+import prettierOptions from './prettierOptions.js';
 
 export default [
   js.configs.recommended,
@@ -11,7 +12,59 @@ export default [
       prettier,
       import: importPlugin,
       jest,
-      sonar: sonarjs.configs['recommended-legacy'],
+      sonarjs: sonarjs.configs['recommended-legacy'],
+    },
+    rules: {
+      //'sonarjs/max-switch-cases': ['error', 15],
+      'no-console': 'error',
+      'import/order': [
+        'error',
+        {
+          'newlines-between': 'always-and-inside-groups',
+          groups: [
+            ['builtin', 'external'],
+            'internal',
+            ['parent', 'sibling'],
+            ['index', 'object'],
+          ],
+          alphabetize: {
+            order: 'desc',
+            caseInsensitive: true,
+          },
+        },
+      ],
+      'sort-imports': [
+        'error',
+        {
+          ignoreCase: true,
+          ignoreDeclarationSort: true,
+          ignoreMemberSort: false,
+          memberSyntaxSortOrder: ['none', 'single', 'all', 'multiple'],
+          allowSeparatedGroups: true,
+        },
+      ],
+      //'prettier/prettier': ['error', prettierOptions],
+      'no-unused-vars': [
+        'error',
+        {
+          varsIgnorePattern: '^_',
+          argsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+        },
+      ],
+      'no-shadow': 'off',
+      //'@typescript-eslint/no-shadow': 'error',
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            {
+              group: ['../../*'],
+              message: 'Usage of relative parent imports is not allowed.',
+            },
+          ],
+        },
+      ],
     },
   },
   {
@@ -40,6 +93,12 @@ export default [
           },
         },
       ],
+    },
+  },
+  {
+    files: ['*.ts'],
+    rules: {
+      'no-shadow': 'off',
     },
   },
 ];
