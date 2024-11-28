@@ -17,6 +17,7 @@ export default [
       globals: {
         ...globals.node,
         ...globals.es2020,
+        ...globals.builtin,
       },
       parserOptions: {
         ecmaVersion: 2020,
@@ -73,8 +74,7 @@ export default [
           ignoreRestSiblings: true,
         },
       ],
-      'no-shadow': 'off',
-      '@typescript-eslint/no-shadow': 'error',
+      'no-shadow': 'error',
       'no-restricted-imports': [
         'error',
         {
@@ -104,7 +104,7 @@ export default [
     },
   },
   {
-    files: ['*.ts', '*.js'],
+    files: ['**/*.ts', '**/*.js'],
     rules: {
       'unicorn/filename-case': [
         'error',
@@ -117,31 +117,29 @@ export default [
     },
   },
   {
-    files: ['*.ts'],
+    files: ['**/*.ts'],
     rules: {
       'no-shadow': 'off',
+      'no-unused-vars': 'off',
     },
   },
   {
-    files: ['*.ts?(x)'],
+    files: ['**/*.ts?(x)'],
     settings: {
       'import/resolver': {
         typescript: {},
       },
     },
-    parser: '@typescript-eslint/parser',
-    parserOptions: {
-      sourceType: 'module',
-      ecmaFeatures: {
-        jsx: true,
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+        warnOnUnsupportedTypeScriptVersion: true,
       },
-      warnOnUnsupportedTypeScriptVersion: true,
     },
-    extends: [
-      'plugin:@typescript-eslint/recommended',
-      'plugin:import/typescript',
-    ],
-    plugins: ['@typescript-eslint'],
     rules: {
       '@typescript-eslint/no-redeclare': 'error',
       '@typescript-eslint/no-shadow': 'error',

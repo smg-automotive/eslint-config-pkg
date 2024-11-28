@@ -8,7 +8,8 @@ const testConfigs = [
   {
     eslintFilePath: `${testDir}/eslint.config.js`,
     good: 0,
-    bad: 16,
+    // PR comment: 2 errors were reported in files that were not valid (counted double) -> surpressed them
+    bad: 14,
     filePattern: '{js,ts}',
   },
   {
