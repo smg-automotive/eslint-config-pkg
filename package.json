@@ -15,7 +15,7 @@
     "src/**/*"
   ],
   "scripts": {
-    "lint": "eslint --ext ts,js,tsx,jsx,json ./src --ignore-path ./src/__tests__/.eslintignore",
+    "lint": "eslint ./src --ignore-pattern ./src/__tests__/.eslintignore",
     "format": "npm run lint -- --fix",
     "test": "node src/__tests__/test.mjs"
   },
@@ -27,8 +27,9 @@
   },
   "homepage": "https://github.com/smg-automotive/eslint-config-pkg#readme",
   "dependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.15.0",
     "@next/eslint-plugin-next": "14.2.18",
-    "@rushstack/eslint-patch": "1.10.4",
     "@typescript-eslint/eslint-plugin": "8.16.0",
     "@typescript-eslint/parser": "8.16.0",
     "eslint": "9.15.0",
