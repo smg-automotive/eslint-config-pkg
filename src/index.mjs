@@ -1,6 +1,7 @@
 // TODO: install sonarjs once supported https://github.com/SonarSource/eslint-plugin-sonarjs/issues/438
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
+import unicorn from 'eslint-plugin-unicorn';
 import jest from 'eslint-plugin-jest';
 import importPlugin from 'eslint-plugin-import';
 import prettier from 'eslint-config-prettier';
@@ -30,6 +31,7 @@ export default [
     plugins: {
       import: importPlugin,
       jest,
+      unicorn,
       // FIXME: sonarjs
       //sonarjs: sonarjs.configs['recommended-legacy'],
     },

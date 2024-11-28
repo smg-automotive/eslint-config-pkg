@@ -9,8 +9,5 @@ export default [
         version: 28, // Add Jest settings
       },
     },
-    rules: {
-      // Include any project-specific rules here
-    },
   },
 ];

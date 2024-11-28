@@ -15,7 +15,7 @@
     "src/**/*"
   ],
   "scripts": {
-    "lint": "eslint ./src --ignore-pattern ./src/__tests__/.eslintignore",
+    "lint": "eslint ./src --ignore-pattern ./src/__tests__/**",
     "format": "npm run lint -- --fix",
     "test": "node src/__tests__/test.mjs"
   },
