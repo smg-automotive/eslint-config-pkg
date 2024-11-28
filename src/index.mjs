@@ -1,18 +1,16 @@
-// TODO: install sonarjs once supported https://github.com/SonarSource/eslint-plugin-sonarjs/issues/438
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
 import unicorn from 'eslint-plugin-unicorn';
+import sonarjs from 'eslint-plugin-sonarjs';
 import jest from 'eslint-plugin-jest';
 import importPlugin from 'eslint-plugin-import';
 import prettier from 'eslint-config-prettier';
-
-// FIXME: sonarjs
-//import sonarjs from 'eslint-plugin-sonarjs';
 import js from '@eslint/js';
 
 export default [
   js.configs.recommended,
   ...tseslint.configs.recommended,
+  sonarjs.configs.recommended,
   {
     ignores: ['dist'],
     languageOptions: {
@@ -32,12 +30,11 @@ export default [
       import: importPlugin,
       jest,
       unicorn,
-      // FIXME: sonarjs
-      //sonarjs: sonarjs.configs['recommended-legacy'],
     },
     rules: {
-      // FIXME: sonarjs
-      //'sonarjs/max-switch-cases': ['error', 15],
+      'sonarjs/max-switch-cases': ['error', 15],
+      'sonarjs/no-empty-function': 'off',
+      'sonarjs/no-unused-expressions': 'off',
       'no-console': 'error',
       'import/order': [
         'error',
@@ -198,5 +195,6 @@ export default [
       ],
     },
   },
+  // TODO: prettier options ? how to? https://github.com/prettier/eslint-plugin-prettier?tab=readme-ov-file#configuration-new-eslintconfigjs
   prettier,
 ];
