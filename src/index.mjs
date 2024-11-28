@@ -35,6 +35,7 @@ export default [
       'sonarjs/max-switch-cases': ['error', 15],
       'sonarjs/no-empty-function': 'off',
       'sonarjs/no-unused-expressions': 'off',
+      'sonarjs/unused-import': 'off',
       'no-console': 'error',
       'import/order': [
         'error',
@@ -52,6 +53,7 @@ export default [
           },
         },
       ],
+      'import/no-unresolved': 'error',
       'sort-imports': [
         'error',
         {
@@ -62,6 +64,7 @@ export default [
           allowSeparatedGroups: true,
         },
       ],
+      '@typescript-eslint/no-unused-vars': 'off',
       'no-unused-vars': [
         'error',
         {
