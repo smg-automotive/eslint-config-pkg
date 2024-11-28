@@ -28,7 +28,7 @@ export default [
     },
   },
   {
-    files: ['*.tsx', '*.jsx'],
+    files: ['**/*.tsx', '**/*.jsx'],
     rules: {
       'unicorn/filename-case': [
         'error',
