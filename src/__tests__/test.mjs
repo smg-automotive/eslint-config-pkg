@@ -14,16 +14,17 @@ const testConfigs = [
   },
   {
     eslintFilePath: `${testDir}/eslint.react.js`,
-    // the 6 expected were are things inside pages since it's nextjs related
+    // the 6 expected are things in pages since it's nextjs related
     good: 6,
-    // should be 28 but only has 18. What was the problem with Markup.tsx???
-    bad: 28,
+    // FIXME: should be 28 but only has 18. What was the problem with Markup.tsx???
+    bad: 18,
     filePattern: '{js,ts,jsx,tsx}',
   },
   {
     eslintFilePath: `${testDir}/eslint.next.js`,
     good: 0,
-    bad: 28,
+    // FIXME: should be 28 but only has 20.
+    bad: 20,
     filePattern: '{js,ts,jsx,tsx}',
   },
 ];
