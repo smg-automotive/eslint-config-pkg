@@ -1,19 +1,7 @@
 require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
-  env: {
-    node: true,
-    es2020: true,
-  },
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
   plugins: ['prettier', 'import', 'jest', 'unicorn', 'sonarjs'],
-  ignorePatterns: ['dist'],
   overrides: [
     {
       files: ['*.ts?(x)'],

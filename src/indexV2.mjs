@@ -1,20 +1,42 @@
-import prettier from 'eslint-config-prettier';
-import importPlugin from 'eslint-plugin-import';
+// TODO: install sonarjs once supported https://github.com/SonarSource/eslint-plugin-sonarjs/issues/438
+import tseslint from 'typescript-eslint';
+import globals from 'globals';
 import jest from 'eslint-plugin-jest';
-import sonarjs from 'eslint-plugin-sonarjs';
+import importPlugin from 'eslint-plugin-import';
+import prettier from 'eslint-config-prettier';
+
+// FIXME: sonarjs
+//import sonarjs from 'eslint-plugin-sonarjs';
 import js from '@eslint/js';
+
 import prettierOptions from './prettierOptions.js';
 
 export default [
   js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
+    ignores: ['dist'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.es2020,
+      },
+      parserOptions: {
+        ecmaVersion: 2020,
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
     plugins: {
-      prettier,
       import: importPlugin,
       jest,
-      sonarjs: sonarjs.configs['recommended-legacy'],
+      // FIXME: sonarjs
+      //sonarjs: sonarjs.configs['recommended-legacy'],
     },
     rules: {
+      // FIXME: sonarjs
       //'sonarjs/max-switch-cases': ['error', 15],
       'no-console': 'error',
       'import/order': [
@@ -43,7 +65,6 @@ export default [
           allowSeparatedGroups: true,
         },
       ],
-      //'prettier/prettier': ['error', prettierOptions],
       'no-unused-vars': [
         'error',
         {
@@ -53,7 +74,7 @@ export default [
         },
       ],
       'no-shadow': 'off',
-      //'@typescript-eslint/no-shadow': 'error',
+      '@typescript-eslint/no-shadow': 'error',
       'no-restricted-imports': [
         'error',
         {
@@ -101,4 +122,5 @@ export default [
       'no-shadow': 'off',
     },
   },
+  prettier,
 ];
