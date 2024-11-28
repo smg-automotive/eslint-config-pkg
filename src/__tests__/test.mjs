@@ -6,13 +6,13 @@ const testDir = join(process.cwd(), 'src', '__tests__');
 
 const testConfigs = [
   {
-    eslintFilePath: `${testDir}/.eslintrc.js`,
+    eslintFilePath: `${testDir}/eslint.config.js`,
     good: 0,
     bad: 16,
     filePattern: '{js,ts}',
   },
   {
-    eslintFilePath: `${testDir}/.eslintrc.react.js`,
+    eslintFilePath: `${testDir}/eslint.react.js`,
     good: 6,
     bad: 28,
     filePattern: '{js,ts,jsx,tsx}',
