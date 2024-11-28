@@ -196,6 +196,5 @@ export default [
       ],
     },
   },
-  // TODO: prettier options ? how to? https://github.com/prettier/eslint-plugin-prettier?tab=readme-ov-file#configuration-new-eslintconfigjs
   prettier,
 ];
