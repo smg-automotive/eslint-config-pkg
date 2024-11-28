@@ -6,14 +6,14 @@ const testDir = join(process.cwd(), 'src', '__tests__');
 
 const testConfigs = [
   {
-    eslintFilePath: `${testDir}/eslint.config.js`,
+    eslintFilePath: `${testDir}/eslint.config.mjs`,
     good: 0,
     // PR comment: 2 errors were reported in files that were not valid (counted double) -> surpressed them
     bad: 14,
     filePattern: '{js,ts}',
   },
   {
-    eslintFilePath: `${testDir}/eslint.react.js`,
+    eslintFilePath: `${testDir}/eslint.react.mjs`,
     // the 6 expected are things in pages since it's nextjs related
     good: 6,
     // FIXME: should be 28 but only has 18. What was the problem with Markup.tsx???
@@ -21,7 +21,7 @@ const testConfigs = [
     filePattern: '{js,ts,jsx,tsx}',
   },
   {
-    eslintFilePath: `${testDir}/eslint.next.js`,
+    eslintFilePath: `${testDir}/eslint.next.mjs`,
     good: 0,
     // FIXME: should be 28 but only has 20.
     bad: 20,
