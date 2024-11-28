@@ -1,1 +1,3 @@
-module.exports = require('./prettierOptions');
+import prettierOptions from './prettierOptions';
+
+export default prettierOptions;
