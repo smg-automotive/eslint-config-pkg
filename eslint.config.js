@@ -1,4 +1,4 @@
-import baseConfig from './src/indexV2.mjs'; // Import the index configuration
+import baseConfig from './src/index.mjs'; // Import the index configuration
 
 export default [
   ...baseConfig,

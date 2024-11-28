@@ -9,8 +9,6 @@ import prettier from 'eslint-config-prettier';
 //import sonarjs from 'eslint-plugin-sonarjs';
 import js from '@eslint/js';
 
-import prettierOptions from './prettierOptions.js';
-
 export default [
   js.configs.recommended,
   ...tseslint.configs.recommended,

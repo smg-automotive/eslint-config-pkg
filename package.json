@@ -27,8 +27,8 @@
   },
   "homepage": "https://github.com/smg-automotive/eslint-config-pkg#readme",
   "dependencies": {
-    "@eslint/eslintrc": "^3.2.0",
-    "@eslint/js": "^9.15.0",
+    "@eslint/eslintrc": "3.2.0",
+    "@eslint/js": "9.15.0",
     "@next/eslint-plugin-next": "14.2.18",
     "@typescript-eslint/eslint-plugin": "8.16.0",
     "@typescript-eslint/parser": "8.16.0",

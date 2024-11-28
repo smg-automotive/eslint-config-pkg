@@ -1,3 +1,3 @@
-import baseConfig from '../indexV2.mjs';
+import baseConfig from '../index.mjs';
 
 export default [...baseConfig];
