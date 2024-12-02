@@ -12,8 +12,9 @@ export default [
   js.configs.recommended,
   ...tseslint.configs.recommended,
   sonarjs.configs.recommended,
+  {    ignores: ['dist'],
+  },
   {
-    ignores: ['dist'],
     languageOptions: {
       globals: {
         ...globals.node,
