@@ -140,7 +140,7 @@ export default [
     files: ['**/*.ts'],
     rules: {
       'no-shadow': 'off',
-      // 'no-unused-vars': 'off',
+      'no-unused-vars': 'off',
     },
   },
   {

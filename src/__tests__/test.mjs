@@ -8,20 +8,20 @@ const testConfigs = [
   {
     eslintFilePath: `${testDir}/eslint.config.mjs`,
     good: 0,
-    bad: 15,
+    bad: 14,
     filePattern: '{js,ts}',
   },
   {
     eslintFilePath: `${testDir}/eslint.react.mjs`,
     // the 6 expected are things in pages since it's nextjs related
     good: 6,
-    bad: 27,
+    bad: 26,
     filePattern: '{js,ts,jsx,tsx}',
   },
   {
     eslintFilePath: `${testDir}/eslint.next.mjs`,
     good: 0,
-    bad: 29,
+    bad: 28,
     filePattern: '{js,ts,jsx,tsx}',
   },
 ];
