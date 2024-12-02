@@ -37,6 +37,12 @@ export default [
     },
   },
   {
+    files: ['**/*.jsx'],
+    rules: {
+      'react/prop-types': ['error'],
+    },
+  },
+  {
     files: ['**/*.tsx', '**/*.jsx'],
     rules: {
       'unicorn/filename-case': [

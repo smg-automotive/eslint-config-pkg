@@ -8,7 +8,6 @@ const testConfigs = [
   {
     eslintFilePath: `${testDir}/eslint.config.mjs`,
     good: 0,
-    // PR comment: 2 errors were reported in files that were not valid (counted double) -> surpressed them
     bad: 14,
     filePattern: '{js,ts}',
   },
@@ -16,15 +15,13 @@ const testConfigs = [
     eslintFilePath: `${testDir}/eslint.react.mjs`,
     // the 6 expected are things in pages since it's nextjs related
     good: 6,
-    // FIXME: should be 28 but only has 24. What was the problem with Markup.tsx???
-    bad: 24,
+    bad: 25,
     filePattern: '{js,ts,jsx,tsx}',
   },
   {
     eslintFilePath: `${testDir}/eslint.next.mjs`,
     good: 0,
-    // FIXME: should be 28 but only has 26.
-    bad: 26,
+    bad: 27,
     filePattern: '{js,ts,jsx,tsx}',
   },
 ];
