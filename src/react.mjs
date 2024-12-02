@@ -27,8 +27,13 @@ export default [
       },
     },
     rules: {
+      'react-hooks/exhaustive-deps': 'error',
       'react/react-in-jsx-scope': 0,
       'react/jsx-uses-react': 0,
+      'testing-library/no-await-sync-events': [
+        'error',
+        { eventModules: ['fire-event'] },
+      ],
     },
   },
   {
