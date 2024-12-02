@@ -34,6 +34,11 @@ export default [
         'error',
         { eventModules: ['fire-event'] },
       ],
+    },
+  },
+  {
+    files: ['**/*.jsx'],
+    rules: {
       'react/prop-types': ['error'],
     },
   },
