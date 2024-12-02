@@ -1,14 +1,14 @@
-import next from "@next/eslint-plugin-next"
+import next from '@next/eslint-plugin-next';
 
 import baseConfig from './react.mjs';
 
 export default [
   ...baseConfig,
   {
-    ignores: [".next/"]
+    ignores: ['.next/'],
   },
   {
-    plugins: { next }
+    plugins: { next },
   },
   {
     files: ['**/cypress/**/*'],

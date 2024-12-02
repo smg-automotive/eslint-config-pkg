@@ -3,9 +3,9 @@ import tseslint from 'typescript-eslint';
 import globals from 'globals';
 import unicorn from 'eslint-plugin-unicorn';
 import sonarjs from 'eslint-plugin-sonarjs';
+import prettier from 'eslint-plugin-prettier/recommended';
 import jest from 'eslint-plugin-jest';
 import importPlugin from 'eslint-plugin-import';
-import prettier from 'eslint-config-prettier';
 import js from '@eslint/js';
 
 export default [
@@ -13,7 +13,7 @@ export default [
   ...tseslint.configs.recommended,
   sonarjs.configs.recommended,
   {
-    ignores: ['dist', "coverage/*", "renovate.json"],
+    ignores: ['dist', 'coverage/*', 'renovate.json'],
   },
   {
     languageOptions: {
@@ -69,7 +69,7 @@ export default [
         },
       ],
       '@typescript-eslint/no-unused-vars': 'off',
-      "@typescript-eslint/no-require-imports": "off",
+      '@typescript-eslint/no-require-imports': 'off',
       'no-unused-vars': [
         'error',
         {

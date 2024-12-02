@@ -5,4 +5,4 @@ const prettierOptions = {
   useTabs: false,
 };
 
-module.exports = prettierOptions;
+export default prettierOptions;
