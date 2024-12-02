@@ -116,16 +116,6 @@ export default [
     rules: { '@typescript-eslint/no-unused-expressions': 'off' },
   },
   {
-    files: ['**/*.mjs'],
-    settings: {
-      'import/resolver': {
-        node: {
-          extensions: ['.mjs'],
-        },
-      },
-    },
-  },
-  {
     files: ['**/__tests__/**/*.[jt]s?(x)'],
     rules: {
       'sonarjs/no-nested-functions': 'off',
