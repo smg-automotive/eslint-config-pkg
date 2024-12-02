@@ -13,7 +13,7 @@ export default [
   ...tseslint.configs.recommended,
   sonarjs.configs.recommended,
   {
-    ignores: ['dist', 'coverage/*', 'renovate.json'],
+    ignores: ['dist', 'coverage/*'],
   },
   {
     languageOptions: {
@@ -106,6 +106,10 @@ export default [
       'sonarjs/no-duplicate-string': 'off',
       'import/no-named-as-default': 'off',
     },
+  },
+  {
+    files: ['**/*.json'],
+    rules: { '@typescript-eslint/no-unused-expressions': 'off' },
   },
   {
     files: ['**/*.ts', '**/*.js'],
