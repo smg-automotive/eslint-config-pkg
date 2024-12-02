@@ -30,6 +30,13 @@ export default [
         },
       },
     },
+    settings: {
+      'import/resolver': {
+        node: {
+          extensions: ['.mjs', '.js', '.jsx', '.ts', '.tsx', '.json'],
+        },
+      },
+    },
     plugins: {
       import: importPlugin,
       jest,
