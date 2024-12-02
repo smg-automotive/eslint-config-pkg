@@ -5,12 +5,14 @@
   "publishConfig": {
     "access": "public"
   },
+  "type": "module",
   "exports": {
     "./prettier": "./src/prettier.mjs",
     "./next": "./src/next.mjs",
     "./react": "./src/react.mjs",
-    ".": "./src/index.mjs"
+    "./index": "./src/index.mjs"
   },
+  "main": "./index.mjs",
   "files": [
     "src/**/*"
   ],
