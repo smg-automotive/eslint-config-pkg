@@ -6,10 +6,10 @@
     "access": "public"
   },
   "exports": {
-    "./prettier": "./src/prettier.js",
-    "./next": "./src/next.js",
-    "./react": "./src/react.js",
-    ".": "./src/index.js"
+    "./prettier": "./src/prettier.mjs",
+    "./next": "./src/next.mjs",
+    "./react": "./src/react.mjs",
+    ".": "./src/index.mjs"
   },
   "files": [
     "src/**/*"
