@@ -8,7 +8,7 @@ export default [
     ignores: ['.next/'],
   },
   {
-    plugins: { next },
+    plugins: { '@next': next },
   },
   {
     files: ['**/cypress/**/*'],
