@@ -1,3 +1,3 @@
-import options from './src/prettierOptions.mjs';
+import options from './src/prettier.mjs';
 
 export default options;
