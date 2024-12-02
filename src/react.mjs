@@ -34,6 +34,7 @@ export default [
         'error',
         { eventModules: ['fire-event'] },
       ],
+      'react/prop-types': ['error'],
     },
   },
   {
