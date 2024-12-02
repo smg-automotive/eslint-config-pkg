@@ -40,6 +40,9 @@ export default [
       'sonarjs/no-empty-function': 'off',
       'sonarjs/no-unused-expressions': 'off',
       'sonarjs/todo-tag': 'off',
+      'sonarjs/fixme-tag': 'off',
+      'sonarjs/jsx-no-constructed-context-values': 'warn',
+      'sonarjs/no-array-index-key': 'warn',
       'sonarjs/unused-import': 'off',
       'no-console': 'error',
       'import/order': [
@@ -111,6 +114,14 @@ export default [
   {
     files: ['**/*.json'],
     rules: { '@typescript-eslint/no-unused-expressions': 'off' },
+  },
+  {
+    files: ['**/__tests__/**/*.[jt]s?(x)'],
+    rules: {
+      'sonarjs/no-nested-functions': 'off',
+      'sonarjs/jsx-no-useless-fragment': 'off',
+      'sonarjs/no-clear-text-protocols': 'off',
+    },
   },
   {
     files: ['**/*.ts', '**/*.js'],
