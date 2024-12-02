@@ -39,6 +39,7 @@ export default [
       'sonarjs/max-switch-cases': ['error', 15],
       'sonarjs/no-empty-function': 'off',
       'sonarjs/no-unused-expressions': 'off',
+      'sonarjs/todo-tag': 'off',
       'sonarjs/unused-import': 'off',
       'no-console': 'error',
       'import/order': [
