@@ -9,7 +9,7 @@ npm install @smg-automotive/eslint-config
 Add a `lint` script to `package.json`:
 
 ```
-  "lint": "eslint --ext ts,js,tsx,jsx,json ."
+  "lint": "eslint ."
 ```
 
 Add a `format` script to `package.json` to be able to use auto fix:
@@ -20,17 +20,20 @@ Add a `format` script to `package.json` to be able to use auto fix:
 
 ### ESLint configuration
 
-Create `.eslintrc.js` in the root of the project:
+Create `eslint.config.mjs` in the root of the project:
 
-```
-  module.exports = {
-    extends: [
-      <eslint_configuration_name>
-    ],
+```mjs
+import nextConfig from '@smg-automotive/eslint-config/next';
+
+export default [
+  ...nextConfig, 
+  {
+    // overwrite or add rules here
   }
+];
 ```
 
-- For plain TypeScript project, use the default one: `"@smg-automotive/eslint-config"`
+- For plain TypeScript project, use the default one: `"@smg-automotive/eslint-config/default"`
 - For React project, use `"@smg-automotive/eslint-config/react"`
 - For Next.js project, use `"@smg-automotive/eslint-config/next"`
 
@@ -40,10 +43,10 @@ Create/Update your `.editorconfig` by [this content](https://github.com/smg-auto
 
 ### Prettier configuration
 
-Create `.prettierrc.js` in the root of the project:
+Create `.prettierrc.mjs` in the root of the project:
 
-```
-module.exports = {
-  ...require("@smg-automotive/eslint-config/prettier"),
-}
+```mjs
+import prettierConfig from '@smg-automotive/eslint-config/prettier';
+
+export default prettierConfig;
 ```
