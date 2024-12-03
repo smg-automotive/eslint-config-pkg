@@ -29,8 +29,8 @@
   "dependencies": {
     "@next/eslint-plugin-next": "14.2.18",
     "@rushstack/eslint-patch": "1.10.4",
-    "@typescript-eslint/eslint-plugin": "8.16.0",
-    "@typescript-eslint/parser": "8.16.0",
+    "@typescript-eslint/eslint-plugin": "8.17.0",
+    "@typescript-eslint/parser": "8.17.0",
     "eslint": "8.57.1",
     "eslint-config-next": "14.2.18",
     "eslint-config-prettier": "9.1.0",
