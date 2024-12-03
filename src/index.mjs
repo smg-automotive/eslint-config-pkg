@@ -35,6 +35,9 @@ export default [
       jest,
       unicorn,
     },
+    settings: {
+      'import/external-module-folders': ['node_modules'],
+    },
     rules: {
       'sonarjs/max-switch-cases': ['error', 15],
       'sonarjs/no-empty-function': 'off',

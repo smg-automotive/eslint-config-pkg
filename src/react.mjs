@@ -34,6 +34,7 @@ export default [
         'error',
         { eventModules: ['fire-event'] },
       ],
+      'sonarjs/no-unknown-property': ['error', { ignore: ['global', 'jsx'] }],
     },
   },
   {
