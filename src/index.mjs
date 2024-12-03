@@ -44,6 +44,7 @@ export default [
       'sonarjs/jsx-no-constructed-context-values': 'warn',
       'sonarjs/no-array-index-key': 'warn',
       'sonarjs/unused-import': 'off',
+      'sonarjs/sonar-no-unused-vars': 'off',
       'no-console': 'error',
       'import/order': [
         'error',
