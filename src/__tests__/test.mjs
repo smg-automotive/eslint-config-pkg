@@ -13,7 +13,7 @@ const testConfigs = [
   },
   {
     eslintFilePath: `${testDir}/eslint.react.mjs`,
-    // the 6 expected are things in pages since it's nextjs related
+    // the 6 expected 'good' examples are thrown in pages since it's nextjs related
     good: 6,
     bad: 25,
     filePattern: '{js,ts,jsx,tsx}',
