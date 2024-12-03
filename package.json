@@ -9,9 +9,8 @@
     "./prettier": "./src/prettier.mjs",
     "./next": "./src/next.mjs",
     "./react": "./src/react.mjs",
-    "./index": "./src/index.mjs"
+    "./base": "./src/index.mjs"
   },
-  "main": "./index.mjs",
   "files": [
     "src/**/*"
   ],
