@@ -99,8 +99,8 @@ export default [
   {
     files: [
       '**/locales/**',
-      '**/__tests__/**/*.[jt]s?(x)',
-      '**/?(*.)+(spec|test).[tj]s?(x)*',
+      '**/__tests__/**/*.{js,jsx,ts,tsx}',
+      '**/?(*.)+(spec|test).{js,jsx,ts,tsx}',
       'package-lock.json',
       '**/*.json',
       '**/config/**',
@@ -137,14 +137,7 @@ export default [
     },
   },
   {
-    files: ['**/*.ts'],
-    rules: {
-      'no-shadow': 'off',
-      'no-unused-vars': 'off',
-    },
-  },
-  {
-    files: ['**/*.ts?(x)'],
+    files: ['**/*.{ts,tsx}'],
     settings: {
       'import/resolver': {
         typescript: {},
@@ -161,6 +154,8 @@ export default [
       },
     },
     rules: {
+      'no-shadow': 'off',
+      'no-unused-vars': 'off',
       '@typescript-eslint/no-redeclare': 'error',
       '@typescript-eslint/no-shadow': 'error',
       '@typescript-eslint/no-explicit-any': 'error',
