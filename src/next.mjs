@@ -5,7 +5,7 @@ import baseConfig from './react.mjs';
 export default [
   ...baseConfig,
   {
-    ignores: ['.next/'],
+    ignores: ['.next/', 'next-env.d.ts'],
   },
   {
     plugins: { '@next/next': next },
@@ -47,11 +47,11 @@ export default [
     files: [
       '**/__tests__/pages/**/*.tsx',
       '**/__tests__/pages/**/*.jsx',
-      'app/**/page.tsx',
-      'app/**/layout.tsx',
-      'app/global-error.tsx',
-      'app/**/not-found.tsx',
-      'app/**/error.tsx',
+      '**/app/**/page.tsx',
+      '**/app/**/layout.tsx',
+      '**/app/global-error.tsx',
+      '**/app/**/not-found.tsx',
+      '**/app/**/error.tsx',
     ],
     rules: {
       'unicorn/filename-case': 'off',
