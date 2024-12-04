@@ -13,6 +13,7 @@ export const logError = (message) => log(chalk.red('error'), message);
 
 export const countESLintError = (eslintFilePath, filePattern, testType) => {
   const spawn = spawnSync(
+    // eslint-disable-next-line sonarjs/no-os-command-from-path
     'npx eslint',
     [
       `--config ${eslintFilePath}`,

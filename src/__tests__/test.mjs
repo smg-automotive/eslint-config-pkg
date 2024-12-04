@@ -6,21 +6,22 @@ const testDir = join(process.cwd(), 'src', '__tests__');
 
 const testConfigs = [
   {
-    eslintFilePath: `${testDir}/.eslintrc.js`,
+    eslintFilePath: `${testDir}/eslint.config.mjs`,
     good: 0,
-    bad: 16,
+    bad: 15,
     filePattern: '{js,ts}',
   },
   {
-    eslintFilePath: `${testDir}/.eslintrc.react.js`,
+    eslintFilePath: `${testDir}/eslint.react.mjs`,
+    // the 6 expected 'good' examples are thrown in pages since it's nextjs related
     good: 6,
-    bad: 28,
+    bad: 27,
     filePattern: '{js,ts,jsx,tsx}',
   },
   {
-    eslintFilePath: `${testDir}/.eslintrc.next.js`,
+    eslintFilePath: `${testDir}/eslint.next.mjs`,
     good: 0,
-    bad: 28,
+    bad: 29,
     filePattern: '{js,ts,jsx,tsx}',
   },
 ];
