@@ -129,7 +129,6 @@ export default [
   },
   {
     files: ['**/*', '**/*.ts', '**/*.js'],
-    excludedFiles: ['**/pages/**/*', '**/helm-chart/**/*'],
     rules: {
       'unicorn/filename-case': [
         'error',
@@ -139,6 +138,12 @@ export default [
           },
         },
       ],
+    },
+  },
+  {
+    files: ['**/pages/**/*', '**/helm-chart/**/*'],
+    rules: {
+      'unicorn/filename-case': 'off',
     },
   },
   {
