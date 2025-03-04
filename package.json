@@ -30,27 +30,27 @@
   },
   "homepage": "https://github.com/smg-automotive/eslint-config-pkg#readme",
   "dependencies": {
-    "@eslint/eslintrc": "3.2.0",
-    "@eslint/js": "9.20.0",
-    "@next/eslint-plugin-next": "15.1.7",
-    "@typescript-eslint/eslint-plugin": "8.24.1",
-    "@typescript-eslint/parser": "8.24.1",
-    "eslint": "9.20.1",
-    "eslint-config-next": "15.1.7",
-    "eslint-config-prettier": "10.0.1",
-    "eslint-import-resolver-typescript": "3.8.1",
+    "@eslint/eslintrc": "3.3.0",
+    "@eslint/js": "9.21.0",
+    "@next/eslint-plugin-next": "15.2.1",
+    "@typescript-eslint/eslint-plugin": "8.26.0",
+    "@typescript-eslint/parser": "8.26.0",
+    "eslint": "9.21.0",
+    "eslint-config-next": "15.2.1",
+    "eslint-config-prettier": "10.0.2",
+    "eslint-import-resolver-typescript": "3.8.3",
     "eslint-plugin-cypress": "4.1.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jest": "28.11.0",
     "eslint-plugin-prettier": "5.2.3",
     "eslint-plugin-react": "7.37.4",
-    "eslint-plugin-react-hooks": "5.1.0",
+    "eslint-plugin-react-hooks": "5.2.0",
     "eslint-plugin-sonarjs": "2.0.4",
     "eslint-plugin-testing-library": "7.1.1",
     "eslint-plugin-unicorn": "56.0.1",
     "globals": "16.0.0",
     "prettier": "3.5.3",
-    "typescript-eslint": "8.24.1"
+    "typescript-eslint": "8.26.0"
   },
   "devDependencies": {
     "chalk": "5.4.1",
@@ -60,6 +60,6 @@
     "semantic-release": "24.2.3"
   },
   "peerDependencies": {
-    "eslint": "9.20.1"
+    "eslint": "9.21.0"
   }
 }
