@@ -13,7 +13,7 @@ export default [
   ...tseslint.configs.recommended,
   sonarjs.configs.recommended,
   {
-    ignores: ['dist', 'coverage/*'],
+    ignores: ['dist', 'coverage/*', 'package-lock.json'],
   },
   {
     languageOptions: {
