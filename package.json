@@ -53,11 +53,11 @@
     "typescript-eslint": "8.35.0"
   },
   "devDependencies": {
-    "chalk": "5.4.1",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "chalk": "5.5.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
     "rimraf": "6.0.1",
-    "semantic-release": "24.2.5"
+    "semantic-release": "24.2.7"
   },
   "peerDependencies": {
     "eslint": "9.29.0"
