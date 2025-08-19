@@ -32,14 +32,14 @@
   "dependencies": {
     "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.33.0",
-    "@next/eslint-plugin-next": "15.4.6",
-    "@typescript-eslint/eslint-plugin": "8.39.1",
-    "@typescript-eslint/parser": "8.39.1",
+    "@next/eslint-plugin-next": "15.4.7",
+    "@typescript-eslint/eslint-plugin": "8.40.0",
+    "@typescript-eslint/parser": "8.40.0",
     "eslint": "9.33.0",
-    "eslint-config-next": "15.4.6",
+    "eslint-config-next": "15.4.7",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
-    "eslint-plugin-cypress": "5.1.0",
+    "eslint-plugin-cypress": "5.1.1",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-jest": "29.0.1",
     "eslint-plugin-prettier": "5.5.4",
@@ -50,7 +50,7 @@
     "eslint-plugin-unicorn": "60.0.0",
     "globals": "16.3.0",
     "prettier": "3.6.2",
-    "typescript-eslint": "8.39.1"
+    "typescript-eslint": "8.40.0"
   },
   "devDependencies": {
     "chalk": "5.5.0",
