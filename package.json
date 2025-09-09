@@ -31,11 +31,11 @@
   "homepage": "https://github.com/smg-automotive/eslint-config-pkg#readme",
   "dependencies": {
     "@eslint/eslintrc": "3.3.1",
-    "@eslint/js": "9.34.0",
+    "@eslint/js": "9.35.0",
     "@next/eslint-plugin-next": "15.5.2",
-    "@typescript-eslint/eslint-plugin": "8.41.0",
-    "@typescript-eslint/parser": "8.41.0",
-    "eslint": "9.34.0",
+    "@typescript-eslint/eslint-plugin": "8.43.0",
+    "@typescript-eslint/parser": "8.43.0",
+    "eslint": "9.35.0",
     "eslint-config-next": "15.5.2",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
@@ -46,11 +46,11 @@
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "5.2.0",
     "eslint-plugin-sonarjs": "2.0.4",
-    "eslint-plugin-testing-library": "7.6.6",
+    "eslint-plugin-testing-library": "7.6.8",
     "eslint-plugin-unicorn": "60.0.0",
     "globals": "16.3.0",
     "prettier": "3.6.2",
-    "typescript-eslint": "8.41.0"
+    "typescript-eslint": "8.43.0"
   },
   "devDependencies": {
     "chalk": "5.6.2",
@@ -60,6 +60,6 @@
     "semantic-release": "24.2.7"
   },
   "peerDependencies": {
-    "eslint": "9.34.0"
+    "eslint": "9.35.0"
   }
 }
