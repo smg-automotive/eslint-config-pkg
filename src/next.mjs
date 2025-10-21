@@ -48,6 +48,8 @@ export default [
       '**/__tests__/pages/**/*.tsx',
       '**/__tests__/pages/**/*.jsx',
       '**/app/**/page.tsx',
+      '**/app/**/loading.tsx',
+      '**/app/**/default.tsx',
       '**/app/**/layout.tsx',
       '**/app/global-error.tsx',
       '**/app/**/not-found.tsx',
