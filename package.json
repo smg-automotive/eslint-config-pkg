@@ -45,7 +45,7 @@
     "eslint-plugin-prettier": "5.5.5",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "7.0.1",
-    "eslint-plugin-sonarjs": "2.0.4",
+    "eslint-plugin-sonarjs": "3.0.7",
     "eslint-plugin-testing-library": "7.15.4",
     "eslint-plugin-unicorn": "62.0.0",
     "globals": "17.2.0",
