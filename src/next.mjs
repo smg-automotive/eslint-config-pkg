@@ -1,5 +1,4 @@
 import next from '@next/eslint-plugin-next';
-import { fixupPluginRules } from '@eslint/compat';
 
 import baseConfig from './react.mjs';
 
@@ -9,7 +8,7 @@ export default [
     ignores: ['.next/', 'next-env.d.ts'],
   },
   {
-    plugins: { '@next/next': fixupPluginRules(next) },
+    plugins: { '@next/next': next },
   },
   {
     files: ['**/cypress/**/*'],

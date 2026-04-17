@@ -7,7 +7,6 @@ import prettier from 'eslint-plugin-prettier/recommended';
 import jest from 'eslint-plugin-jest';
 import importPlugin from 'eslint-plugin-import';
 import js from '@eslint/js';
-import { fixupPluginRules } from '@eslint/compat';
 
 export default [
   js.configs.recommended,
@@ -32,9 +31,9 @@ export default [
       },
     },
     plugins: {
-      import: fixupPluginRules(importPlugin),
-      jest: fixupPluginRules(jest),
-      unicorn: fixupPluginRules(unicorn),
+      import: importPlugin,
+      jest,
+      unicorn,
     },
     settings: {
       'import/external-module-folders': ['node_modules'],
@@ -45,6 +44,8 @@ export default [
       'sonarjs/no-unused-expressions': 'off',
       'sonarjs/todo-tag': 'warn',
       'sonarjs/fixme-tag': 'warn',
+      'sonarjs/jsx-no-constructed-context-values': 'warn',
+      'sonarjs/no-array-index-key': 'warn',
       'sonarjs/unused-import': 'off',
       'sonarjs/sonar-no-unused-vars': 'off',
       'no-console': 'error',
