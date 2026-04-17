@@ -3,7 +3,6 @@ import testingLibrary from 'eslint-plugin-testing-library';
 import hooks from 'eslint-plugin-react-hooks';
 import react from 'eslint-plugin-react';
 import cypress from 'eslint-plugin-cypress';
-import { fixupPluginRules } from '@eslint/compat';
 
 import baseConfig from './index.mjs'; // Import the base config
 
@@ -17,10 +16,10 @@ export default [
       },
     },
     plugins: {
-      react: fixupPluginRules(react),
-      'react-hooks': fixupPluginRules(hooks),
-      'testing-library': fixupPluginRules(testingLibrary),
-      cypress: fixupPluginRules(cypress),
+      react,
+      'react-hooks': hooks,
+      'testing-library': testingLibrary,
+      cypress,
     },
     settings: {
       react: {
@@ -31,13 +30,11 @@ export default [
       'react-hooks/exhaustive-deps': 'error',
       'react/react-in-jsx-scope': 0,
       'react/jsx-uses-react': 0,
-      'react/jsx-no-constructed-context-values': 'warn',
-      'react/no-array-index-key': 'warn',
       'testing-library/no-await-sync-events': [
         'error',
         { eventModules: ['fire-event'] },
       ],
-      'react/no-unknown-property': ['error', { ignore: ['global', 'jsx'] }],
+      'sonarjs/no-unknown-property': ['error', { ignore: ['global', 'jsx'] }],
     },
   },
   {
