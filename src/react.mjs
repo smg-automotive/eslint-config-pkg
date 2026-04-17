@@ -32,6 +32,7 @@ export default [
       'react/react-in-jsx-scope': 0,
       'react/jsx-uses-react': 0,
       'react/jsx-no-constructed-context-values': 'warn',
+      'react/no-array-index-key': 'warn',
       'testing-library/no-await-sync-events': [
         'error',
         { eventModules: ['fire-event'] },
