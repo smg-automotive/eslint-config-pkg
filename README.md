@@ -1,5 +1,8 @@
 # SMG-Automotive ESLint Config
 
+> [!IMPORTANT]
+> This project is being migrated into [smg-automotive/automotive-web](https://github.com/smg-automotive/automotive-web/). Please check the monorepo before starting new work in this repository.
+
 ## Usage
 
 ```shell
