@@ -6,12 +6,7 @@ docker: &DOCKER_NODE
 
 slack_context: &SLACK_NOTIFICATION_CONTEXT
   context:
-    - &SLACK_NOTIFICATION_CONTEXT_ENTRY FE Slack notifications
-
-npm_publishing_context: &NPM_PUBLISHING_CONTEXT
-  context:
-    - *SLACK_NOTIFICATION_CONTEXT_ENTRY
-    - NPM package publishing
+    - FE Slack notifications
 
 slack_notify: &SLACK_NOTIFY
   slack/notify:
@@ -62,27 +57,8 @@ jobs:
       - run: npm run lint
       - <<: *SLACK_NOTIFY
 
-  pre_release:
-    <<: *DOCKER_NODE
-    resource_class: small
-    steps:
-      - attach_workspace:
-          at: ~/
-      # manually set PR shell variables to empty to build pull request
-      - run: CI_PULL_REQUEST= CIRCLE_PULL_REQUEST= npx semantic-release
-      - <<: *SLACK_NOTIFY
-
-  release:
-    <<: *DOCKER_NODE
-    resource_class: small
-    steps:
-      - attach_workspace:
-          at: ~/
-      - run: npx semantic-release
-      - <<: *SLACK_NOTIFY
-
 workflows:
-  test_and_release:
+  test:
     jobs:
       - install:
           <<: *SLACK_NOTIFICATION_CONTEXT
@@ -94,19 +70,3 @@ workflows:
           <<: *SLACK_NOTIFICATION_CONTEXT
           requires:
             - install
-      - pre_release:
-          <<: *NPM_PUBLISHING_CONTEXT
-          requires:
-            - lint
-            - unit
-          filters:
-            branches:
-              ignore: main
-      - release:
-          <<: *NPM_PUBLISHING_CONTEXT
-          requires:
-            - lint
-            - unit
-          filters:
-            branches:
-              only: main
