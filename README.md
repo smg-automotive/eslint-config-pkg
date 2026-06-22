@@ -40,6 +40,8 @@ export default [
 - For React project, use `"@smg-automotive/eslint-config/react"`
 - For Next.js project, use `"@smg-automotive/eslint-config/next"`
 
+The React and Next.js configs require JSX forms to explicitly set `method="post"` to prevent the native browser GET fallback from exposing form values in the URL.
+
 ### EditorConfig configuration
 
 Create/Update your `.editorconfig` by [this content](https://github.com/smg-automotive/eslint-config-pkg/blob/main/.editorconfig).

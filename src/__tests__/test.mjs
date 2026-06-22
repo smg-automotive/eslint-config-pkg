@@ -15,13 +15,13 @@ const testConfigs = [
     eslintFilePath: `${testDir}/eslint.react.mjs`,
     // the 6 expected 'good' examples are thrown in pages since it's nextjs related
     good: 6,
-    bad: 27,
+    bad: 29,
     filePattern: '{js,ts,jsx,tsx}',
   },
   {
     eslintFilePath: `${testDir}/eslint.next.mjs`,
     good: 0,
-    bad: 29,
+    bad: 31,
     filePattern: '{js,ts,jsx,tsx}',
   },
 ];

@@ -49,6 +49,21 @@ export default [
   {
     files: ['**/*.tsx', '**/*.jsx'],
     rules: {
+      'no-restricted-syntax': [
+        'error',
+        {
+          selector:
+            "JSXOpeningElement[name.name='form']:not(:has(JSXAttribute[name.name='method']))",
+          message:
+            'Forms must explicitly set method="post" to avoid the native browser GET fallback.',
+        },
+        {
+          selector:
+            "JSXOpeningElement[name.name='form'] > JSXAttribute[name.name='method']:not([value.type='Literal'][value.value='post'])",
+          message:
+            'Forms must explicitly set method="post" to avoid the native browser GET fallback.',
+        },
+      ],
       'unicorn/filename-case': [
         'error',
         {
